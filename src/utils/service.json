@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Pengembangan web",
+        "desc": "Bangun Situs Web Anda. Responsif, Ui/Ux Experience, dan Modern. menggunakan bahasa pemrograman Html, Css, Js (framework React.js) dari sisi client, dan Php (framework Laravel) dari sisi server.",
+        "status": "Layanan"
+    },
+    {
+        "id": 2,
+        "title": "Aplikasi Seluler",
+        "desc": "Bangun Aplikasi seluler Android dan iOS Anda dengan Kredibilitas tinggi, Kemudahan dari Sisi Teknis, menggunakan React Native.",
+        "status": "Layanan"
+    },
+    {
+        "id": 3,
+        "title": "Restful API",
+        "desc": "Bangun Restful API untuk Komunikasi antar Aplikasi Anda menggunakan Protokol HTTP/HTTPS.",
+        "status": "Layanan"
+    }
+]

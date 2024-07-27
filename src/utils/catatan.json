@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Sertifikasi SKKNI WEB DEVELOPER oleh BPPTIK",
+    "image": "bpptik-sertifikasi.png",
+    "file": "sertifikat BNSP.pdf",
+    "url": ""
+  },
+  {
+    "id": 2,
+    "title": "Sertifikasi SKKNI DATA ANALIS oleh BPPTIK",
+    "image": "Sertifikat_BNSP_Analisis_Program.jpg",
+    "file": "Sertifikat_BNSP_Analisis_Program.pdf",
+    "url": ""
+  },
+  {
+    "id": 3,
+    "title": "Seritifikasi AWS oleh Dicoding",
+    "image": "dicoding-sertifikasi.png",
+    "file": "Sertifikat Dicoding AWS.pdf",
+    "url": ""
+  },
+  {
+    "id": 4,
+    "title": "Digital Talent Sertifikasi",
+    "image": "digitaltalent-sertifikasi.png",
+    "file": "sertifikat VSGA.pdf",
+    "url": ""
+  },
+  {
+    "id": 5,
+    "title": "Ditama Course Sertifikasi",
+    "image": "ditamacourse-sertifikasi.png",
+    "file": "Sertifikat Ditama Course.pdf",
+    "url": ""
+  },
+  {
+    "id": 6,
+    "title": "Tutorial Push Notification React Native",
+    "image": "tutorialpushnotif.png",
+    "file": "Sertifikat Dicoding AWS.pdf",
+    "url": "https://youtu.be/v0At1Ara5uk"
+  }
+]

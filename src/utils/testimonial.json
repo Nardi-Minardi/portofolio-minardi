@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "image": "https://swiperjs.com/demos/images/nature-1.jpg",
+        "nama": "Jhon Doe",
+        "asal": "Jakarta",
+        "desc": "Bangun Situs Web Anda. Responsif, Ui/Ux Experience, dan Modern. menggunakan bahasa pemrograman Html, Css, Js (framework React.js) dari sisi client, dan Php (framework Laravel) dari sisi server."
+    },
+    {
+        "id": 2,
+        "image": "https://swiperjs.com/demos/images/nature-2.jpg",
+        "nama": "Clarisa",
+        "asal": "Bandung",
+        "desc": "Bangun Situs Web Anda. Responsif, Ui/Ux Experience, dan Modern. menggunakan bahasa pemrograman Html, Css, Js (framework React.js) dari sisi client, dan Php (framework Laravel) dari sisi server."
+    }
+    
+]

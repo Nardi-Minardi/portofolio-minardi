@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "title": "PT 360 consulting",
+        "desc": "Bekerja sebagai web developer di PT 360 consulting.",
+        "jobDesc": "Development Program Inventory, Migration Oracle Database to PostgreSQL, Migration Program Desktop to Web Application",
+        "proyek":[
+            {
+                "id": 1,
+                "title": "Proyek membangun aplikasi aplikasi indomarco",
+                "image": "./images/indomarco.png",
+                "url": "https://www.klikindomaret.com/"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "National Urban Water Supply (NUWSP)",
+        "desc": "MIS Specialist. Fullstack development web application, Fullstack development mobile application, Menyiapkan/mengelola sistem informasi web, Menyiapkan/mengelola sistem manajemen server ",
+        "proyek":[
+            {
+                "id": 1,
+                "title": "Proyek membangun situs website nuwsp.web.id",
+                "image": "./images/nuwsp.png",
+                "url": "https://www.nuwsp.web.id/"
+            },
+            {
+                "id": 2,
+                "title": "Proyek membangun aplikasi seluler NuwspMobile",
+                "image": "./images/nuwsp-mobile.png",
+                "url": "https://play.google.com/store/apps/details?id=com.nuwspmobile"
+            },
+            {
+                "id": 3,
+                "title": "Proyek membangun aplikasi Self Assigment Toolkits",
+                "image": "./images/sat.png",
+                "url": "https://www.nuwsp.web.id/penilaian/"
+            }
+        ]
+    },
+    {
+      "id": 3,
+      "title": "Voice Sonics Labs",
+      "desc": "Frontend Developer. Implementation UI/UX to Web, Integration CI/CD enviroment AWS, Integration Chat GPT 3.5 turbo (generate image to text), Integration whisper to transcribe video (dubbing), Integration Oauth2 google firebase and google account, Development Frontend application with React, Next js, Redux, Next/Ui, Tailwind",
+      "proyek":[
+          {
+              "id": 1,
+              "title": "Create the ultimate dubbing experience",
+              "image": "./images/dubair.png",
+              "url": "https://web.dubair.ai/"
+          },
+          {
+              "id": 2,
+              "title": "Create studio-quality audio and video content with advanced AI voices on our web and mobile applications.",
+              "image": "./images/voiceair.png",
+              "url": "https://voiceair.ai/"
+          }
+      ]
+  }
+]
