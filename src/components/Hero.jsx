@@ -27,7 +27,7 @@ const Hero = () => {
 
               <div className="cv-info">
                 <p>Cari Tahu Tentang Saya ?</p>
-                <a className="btn-cv" target="_blank" href={`./images/cv.pdf`}>Download CV</a>
+                {/* <a className="btn-cv" target="_blank" href={`./images/cv.pdf`}>Download CV</a> */}
               </div>
 
               <div className="hero-social-info">
