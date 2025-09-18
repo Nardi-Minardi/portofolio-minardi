@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ProgressBar } from '.';
 
 const Footer = () => {
@@ -50,10 +51,10 @@ const Footer = () => {
               
               <div className="cta-section">
                 <p className="cta-text">Ready to start your project?</p>
-                <a href="/kontak" className="cta-button">
-                  <span>Let's Talk</span>
+                <Link href="/kontak" className="cta-button">
+                  <span>Let&apos;s Talk</span>
                   <i className="fas fa-arrow-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
 
