@@ -16,7 +16,7 @@ const CardSwipper = () => {
     }));
   };
 
-  const truncateText = (text, maxLength = 100) => {
+  const truncateText = (text, maxLength = 120) => {
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength) + '...';
   };
@@ -88,6 +88,10 @@ const CardSwipper = () => {
     <section className="recommendations-section">
       <div className="container">
         <div className="section-header">
+          <div className="header-badge">
+            <i className="fas fa-rocket"></i>
+            <span>Specially Curated For You</span>
+          </div>
           
           <h2 className="section-title">
             Saatnya <span className="gradient-text">Upgrade Skills</span> Anda!
@@ -98,113 +102,122 @@ const CardSwipper = () => {
             untuk mengakselerasi karir dan meningkatkan kompetensi profesional Anda.
           </p>
           
-        
+          <div className="stats-row">
+            <div className="stat-item">
+              <span className="stat-number">1000+</span>
+              <span className="stat-label">Alumni Sukses</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">95%</span>
+              <span className="stat-label">Job Placement</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">24/7</span>
+              <span className="stat-label">Learning Support</span>
+            </div>
+          </div>
         </div>
 
-        <div className="swiper-container-fullwidth">
+        <div className="swiper-container">
           <Swiper
             modules={[Pagination, Navigation, Autoplay]}
             breakpoints={{
-              // Mobile phones
-              320: {
+              640: {
                 slidesPerView: 1,
-                spaceBetween: 20,
-                centeredSlides: true
+                spaceBetween: 20
               },
-              // Tablets
               768: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                centeredSlides: true
+                slidesPerView: 2,
+                spaceBetween: 30
               },
-              // Desktop - Full width cards
               1024: {
-                slidesPerView: 1,
-                spaceBetween: 40,
-                centeredSlides: true
+                slidesPerView: 3,
+                spaceBetween: 30
               }
             }}
             onSwiper={setSwiperRef}
             slidesPerView={1}
-            spaceBetween={20}
-            centeredSlides={true}
+            spaceBetween={30}
             autoplay={{
-              delay: 4000,
+              delay: 5000,
               disableOnInteraction: false,
-              pauseOnMouseEnter: true,
             }}
             pagination={{
               clickable: true,
               dynamicBullets: true
             }}
             navigation={true}
-            loop={true}
-            className="recommendations-swiper-fullwidth"
+            className="recommendations-swiper"
           >
             {recommendations.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="recommendation-card-fullwidth">
-                  <div className="card-inner-content">
-                    <div className="card-left-section">
-                      <div className={`card-gradient bg-gradient-to-r ${item.color}`}></div>
-                      
-                      <div className="card-badge">
-                        {item.badge}
-                      </div>
-                      
-                      <div className="logo-section">
-                        <div className="logo-container">
-                          <img src={item.image} alt={item.title} className="program-logo" />
-                        </div>
-                        <div className="category-tag">
-                          {item.category}
-                        </div>
-                      </div>
+                <div className="recommendation-card">
+                  <div className={`card-gradient bg-gradient-to-r ${item.color}`}></div>
+                  
+                  <div className="card-badge">
+                    {item.badge}
+                  </div>
+                  
+                  <div className="card-header">
+                    <div className="logo-container">
+                      <img src={item.image} alt={item.title} className="program-logo" />
+                    </div>
+                    <div className="category-tag">
+                      {item.category}
+                    </div>
+                  </div>
+                  
+                  <div className="card-content">
+                    <h3 className="program-title">{item.title}</h3>
+                    <p className="program-subtitle">{item.subtitle}</p>
+                    <div className="program-description-container">
+                      <p className="program-description">
+                        {expandedCards[item.id] 
+                          ? item.description 
+                          : truncateText(item.description, 100)
+                        }
+                      </p>
+                      {item.description.length > 100 && (
+                        <button 
+                          className="read-more-btn"
+                          onClick={() => toggleExpanded(item.id)}
+                        >
+                          {expandedCards[item.id] ? 'Lebih sedikit' : 'Selengkapnya'}
+                        </button>
+                      )}
                     </div>
                     
-                    <div className="card-right-section">
-                      <div className="card-content-fullwidth">
-                        <h3 className="program-title">{item.title}</h3>
-                        <p className="program-subtitle">{item.subtitle}</p>
-                        <div className="program-description-container">
-                          <p className="program-description">
-                            {expandedCards[item.id] 
-                              ? item.description 
-                              : truncateText(item.description, 150)
-                            }
-                          </p>
-                          {item.description.length > 150 && (
-                            <button 
-                              className="read-more-btn"
-                              onClick={() => toggleExpanded(item.id)}
-                            >
-                              {expandedCards[item.id] ? 'Lebih sedikit' : 'Selengkapnya'}
-                            </button>
-                          )}
-                        </div>
-                        
-                        <div className="benefits-grid">
-                          {item.benefits.map((benefit, index) => (
-                            <div key={index} className="benefit-item-fullwidth">
-                              <i className="fas fa-check"></i>
-                              <span>{benefit}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="card-actions-fullwidth">
-                        <a 
-                          href={item.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="cta-button-fullwidth"
-                        >
-                          <span>Mulai Sekarang</span>
-                          <i className="fas fa-arrow-right"></i>
-                        </a>
-                        
-                      </div>
+                    <div className="benefits-list">
+                      {item.benefits.map((benefit, index) => (
+                        <span key={index} className="benefit-item">
+                          <i className="fas fa-check"></i>
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="card-actions">
+                    <a 
+                      href={item.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="cta-button"
+                    >
+                      <span>Mulai Sekarang</span>
+                      <i className="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <button className="info-button">
+                      <i className="fas fa-info-circle"></i>
+                      Detail
+                    </button>
+                  </div>
+                  
+                  <div className="card-footer">
+                    <div className="urgency-indicator">
+                      <i className="fas fa-clock"></i>
+                      <span>Pendaftaran terbatas!</span>
                     </div>
                   </div>
                 </div>
@@ -213,6 +226,16 @@ const CardSwipper = () => {
           </Swiper>
         </div>
         
+        <div className="call-to-action">
+          <div className="cta-content">
+            <h3>Masih Ragu? Konsultasi Gratis Dulu!</h3>
+            <p>Tim ahli kami siap membantu Anda memilih program yang tepat</p>
+            <button className="consultation-btn">
+              <i className="fas fa-phone"></i>
+              Konsultasi Gratis
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   )

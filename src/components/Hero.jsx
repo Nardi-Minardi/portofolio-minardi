@@ -1,57 +1,76 @@
 import React from 'react';
 
-// const baseURL = 'http://localhost/portofolio/';
-const baseURL = 'https://nardiminardi.com/';
-
 const Hero = () => {
   return (
     <div className="container">
-      <section className="bg-white border-2 border-gray-200 rounded-lg shadow-sm p-4 md:p-8 mb-4">
-
-        <div className="flex flex-col lg:flex-row gap-5 lg:gap-20 xl:gap-20">
-
-          <div className="flex lg:w-1/2 xl:w-1/2 w-full">
-            <img src={`./images/fotoProfile.png`} alt="foto-profile" className="rounded-md" />
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="hero-image">
+            <div className="image-wrapper">
+              <img 
+                src={`./images/fotoProfile.png`} 
+                alt="Minardi Profile" 
+                className="profile-image" 
+              />
+              <div className="image-overlay"></div>
+            </div>
           </div>
 
+          <div className="hero-text">
+            <div className="hero-badge">
+              <span>👋 Halo, saya</span>
+            </div>
+            
+            <h1 className="hero-title">Minardi</h1>
+            
+            <h2 className="hero-subtitle">
+              Fullstack Developer & 
+              <span className="gradient-text"> Software Engineer</span>
+            </h2>
+            
+            <p className="hero-description">
+              Dengan pengalaman yang kuat dalam Web Development, Software Engineering, dan Mobile Development, 
+              saya telah memperoleh sertifikasi dengan nilai terbaik dari Badan Nasional Sertifikasi Profesi. 
+              Keahlian saya meliputi pemrograman, Laravel, React JS, dan React Native.
+            </p>
 
-
-          <div className="flex flex-col w-full lg:w-full xl:w-full">
-
-            <h3>Minardi</h3>
-            <h5>Fullstack Developer,</h5>
-            <p className="hero-desc text-justify">Dengan pengalaman yang kuat dalam Web Development, Software Engineering, dan Mobile Development, saya telah memperoleh sertifikasi dengan nilai terbaik dari Badan Nasional Sertifikasi Profesi. Keahlian saya meliputi pemrograman, Laravel, React JS, dan React Native. Saya berdedikasi untuk mencari peluang baru yang akan memungkinkan saya untuk mengaplikasikan dan mengembangkan keahlian ini lebih lanjut.</p>
-
-
-            <div className="find-about-me">
-
-              <div className="cv-info">
-                <p>Cari Tahu Tentang Saya ?</p>
-                {/* <a className="btn-cv" target="_blank" href={`./images/cv.pdf`}>Download CV</a> */}
+            <div className="hero-actions">
+              <div className="hero-cta">
+                <p className="cta-text">Cari Tahu Tentang Saya?</p>
+                <div className="action-buttons">
+                  <button className="btn-primary">
+                    <i className="fas fa-download"></i>
+                    Download CV
+                  </button>
+                  <button className="btn-secondary">
+                    <i className="fas fa-envelope"></i>
+                    Hubungi Saya
+                  </button>
+                </div>
               </div>
 
-              <div className="hero-social-info">
-                <ul>
-                  <li>
-                    <a href="https://www.linkedin.com/in/nardi-minardi-007182179/" target="_blank">
-                      <i className="fab fa-linkedin fa-2x" title="Linkedin"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/Nardi-Minardi" target="_blank">
-                      <i className="fab fa-github fa-2x" title="Github"></i>
-                    </a>
-                  </li>
-
-                </ul>
+              <div className="social-links">
+                <a href="https://www.linkedin.com/in/nardi-minardi-007182179/" target="_blank" className="social-link linkedin">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Nardi-Minardi" target="_blank" className="social-link github">
+                  <i className="fab fa-github"></i>
+                </a>
+                <a href="#" className="social-link email">
+                  <i className="fas fa-envelope"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
+        <div className="hero-background">
+          <div className="bg-element bg-element-1"></div>
+          <div className="bg-element bg-element-2"></div>
+          <div className="bg-element bg-element-3"></div>
+        </div>
       </section>
     </div>
-
   )
 }
 
